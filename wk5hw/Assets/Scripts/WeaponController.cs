@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
+    private GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,6 @@ public class WeaponController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.transform.position = enemy.transform.position;
     }
 }

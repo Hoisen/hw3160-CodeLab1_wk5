@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     private GameObject player;
+
+    private float speed = .1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = player.transform.position;
+        //this.transform.position = player.transform.position * speed;
     }
 }

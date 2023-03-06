@@ -36,6 +36,11 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector2.right * forceAmount);
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //GameManager.instance.GetComponent<ASCIILevelLoad>().();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -48,6 +53,16 @@ public class PlayerController : MonoBehaviour
         if (col.tag == "AnotherDoor")
         {
             GameManager.instance.GetComponent<ASCIILevelLoad>().AnotherDoor();
+        }
+
+        if (col.tag == "spike")
+        {
+            this.transform.localScale = new Vector3(-.8f, -.8f, -.8f);
+        }
+
+        if (col.tag == "enemy")
+        {
+            Debug.Log("lives: -1, -1, -1");
         }
     }
 }

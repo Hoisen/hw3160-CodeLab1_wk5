@@ -118,6 +118,13 @@ public class ASCIILevelLoad: MonoBehaviour
                         break;
                     case 'f':
                         newObj = Instantiate<GameObject>(fire);
+                        if (Input.GetKeyDown(KeyCode.F))
+                        {
+                            Debug.Log("FIRE, FIRE, FIRE");
+                        }
+                        break;
+                    case 'e':
+                        newObj = Instantiate<GameObject>(enemy);
                         break;
                     default:
                         newObj = null;
@@ -188,6 +195,9 @@ public class ASCIILevelLoad: MonoBehaviour
                         break;
                     case 'f':
                         newObj = Instantiate<GameObject>(fire);
+                        break;
+                    case 'e':
+                        newObj = Instantiate<GameObject>(enemy);
                         break;
                     default:
                         newObj = null;

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - AnotherDoor
   - Door
+  - enemy
+  - spike
   layers:
   - Default
   - TransparentFX
